@@ -1,0 +1,25 @@
+// https://github.com/matthova/clock/blob/master/fonts/europa-regular-webfont.ttf
+@font-face {
+	font-family: "Europa";
+	src: url("./assets/fonts/europa.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Europa", Arial, sans-serif;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+}
