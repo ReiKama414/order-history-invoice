@@ -6,7 +6,14 @@ module.exports = {
 			colors: {
 				primary: "#A10D1F",
 				text: "#796E65",
-				background: '#F2F0F0',
+				background: "#F2F0F0",
+				customColor1: "#866768",
+			},
+			height: {
+				15: "3.75rem",
+			},
+			gap: {
+				15: "3.75rem",
 			},
 		},
 	},

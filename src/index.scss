@@ -23,3 +23,14 @@ body {
 a {
 	text-decoration: none;
 }
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url(./assets/icons/Chevron_down.svg);
+	background-position: 95%;
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-color: #eee;
+}
