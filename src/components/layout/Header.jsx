@@ -50,7 +50,7 @@ const Header = () => {
 	];
 
 	const navList = (
-		<ul className="mt-2 mb-4 flex flex-col gap-2 xl:mb-0 xl:mt-0 xl:flex-row xl:items-center xl:gap-10 uppercase font-normal text-sm leading-[18px]">
+		<ul className="mt-2 mb-4 flex flex-col gap-2 xl:mb-0 xl:mt-0 xl:flex-row xl:items-center xl:gap-10 uppercase  text-sm leading-[18px]">
 			{links.map((link, index) => (
 				<Typography
 					key={index}
@@ -58,7 +58,7 @@ const Header = () => {
 					variant="small"
 					color="blue-gray"
 					className="flex items-center gap-x-2 p-1 font-medium">
-					<a href={link.href} className="flex items-center text-text hover:text-primary">
+					<a href={link.href} className="text-text hover:text-primary">
 						{link.text}
 					</a>
 				</Typography>
@@ -67,7 +67,7 @@ const Header = () => {
 	);
 
 	const subNavList = (
-		<ul className="w-full xl:w-auto mt-2 mb-4 flex flex-col gap-2 xl:mb-0 xl:mt-0 xl:flex-row xl:items-center xl:gap-15 uppercase font-normal text-sm leading-[18px]">
+		<ul className="w-full xl:w-auto mt-2 mb-4 flex flex-col gap-2 xl:mb-0 xl:mt-0 xl:flex-row xl:items-center xl:gap-15 uppercase text-sm leading-[18px]">
 			{sublinks.map((link, index) => (
 				<Typography
 					key={index}
@@ -77,7 +77,7 @@ const Header = () => {
 					className={`flex items-center justify-center gap-x-2 py-[15px] font-medium border-2 border-transparent ${
 						link.active ? "border-b-white" : ""
 					}`}>
-					<a href={link.href} className="flex items-center text-white">
+					<a href={link.href} className="text-white">
 						{link.text}
 					</a>
 				</Typography>
@@ -98,20 +98,14 @@ const Header = () => {
 						<div className="hidden xl:block">{navList}</div>
 					</div>
 					<div className="flex items-center gap-x-[14px] text-customColor1">
-						<Button
-							variant="text"
-							size="sm"
-							className="hidden xl:inline-flex items-center font-normal text-sm leading-6 p-1">
+						<Button variant="text" size="sm" className="hidden xl:inline-flex items-center  text-sm leading-6 p-1">
 							<img src={profileIcon} className="w-full object-contain pe-1" alt="Account Icon" />
 							<span>ACCOUNT</span>
 						</Button>
-						<Button
-							variant="text"
-							size="sm"
-							className="hidden xl:inline-flex items-center font-normal text-sm leading-6 p-1">
+						<Button variant="text" size="sm" className="hidden xl:inline-flex items-center  text-sm leading-6 p-1">
 							<span>LOGOUT</span>
 						</Button>
-						<select className="hidden xl:inline-flex row-start-1 col-start-1 text-text bg-transparent focus:outline-none font-normal text-sm leading-6 py-2 ps-3 pe-6 cursor-pointer">
+						<select className="hidden xl:inline-flex row-start-1 col-start-1 text-text bg-transparent focus:outline-none  text-sm leading-6 py-2 ps-3 pe-6 cursor-pointer">
 							<option value="EN">EN</option>
 							<option value="CA">CA</option>
 							<option value="FR">FR</option>
@@ -131,8 +125,11 @@ const Header = () => {
 							<MenuList className="p-1">
 								{sublinks.map((link) => {
 									return (
-										<MenuItem key={link.text} onClick={closeMenu} className={'flex items-center gap-2 rounded'}>
-											<Typography as="span" variant="small" className="font-normal py-2 text-text" color={"inherit"}>
+										<MenuItem
+											key={link.text}
+											onClick={closeMenu}
+											className={"flex items-center gap-2 rounded pb-0 focus:outline-none"}>
+											<Typography as="span" variant="small" className=" py-2 text-text" color={"inherit"}>
 												{link.text}
 											</Typography>
 										</MenuItem>
@@ -150,13 +147,13 @@ const Header = () => {
 					</div>
 				</div>
 				<MobileNav open={openNav}>
-					<div className="container mx-auto">
+					<div className={`container mx-auto ${openNav ? "" : "pointer-events-none"}`}>
 						{navList}
 						<div className="flex items-center gap-x-1 text-text">
-							<Button fullWidth variant="text" size="sm" className="font-normal text-sm leading-6 py-2 ps-2 pe-6">
+							<Button fullWidth variant="text" size="sm" className=" text-sm leading-6 py-2 ps-2 pe-6">
 								<span>LOGOUT</span>
 							</Button>
-							<select className="w-full row-start-1 col-start-1 bg-transparent focus:outline-none font-normal text-sm leading-6 py-2 ps-2 pe-6 text-center">
+							<select className="w-full row-start-1 col-start-1 bg-transparent focus:outline-none text-sm leading-6 py-2 ps-2 pe-6 text-center">
 								<option value="EN">EN</option>
 								<option value="CA">CA</option>
 								<option value="FR">FR</option>
@@ -206,7 +203,7 @@ export default Header;
 // 			<div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3 xl:p-8">
 // 				{/* Link */}
 // 				<div className={`w-full xl:block xl:w-auto ${isMenuOpen ? "" : "hidden"}`} id="navbar-default">
-// 					<ul className="uppercase font-normal text-sm leading-[18px] flex flex-col p-4 xl:p-0 mt-4 border border-gray-100 rounded-xl xl:flex-row xl:space-x-10 rtl:space-x-reverse xl:mt-0 xl:border-0">
+// 					<ul className="uppercase  text-sm leading-[18px] flex flex-col p-4 xl:p-0 mt-4 border border-gray-100 rounded-xl xl:flex-row xl:space-x-10 rtl:space-x-reverse xl:mt-0 xl:border-0">
 // 						{links.map((link, index) => (
 // 							<li key={index}>
 // 								<a

@@ -8,6 +8,7 @@ module.exports = {
 				text: "#796E65",
 				background: "#F2F0F0",
 				customColor1: "#866768",
+				customColor2: "#B78E6C",
 			},
 			height: {
 				15: "3.75rem",

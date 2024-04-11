@@ -1,7 +1,11 @@
 // https://github.com/matthova/clock/blob/master/fonts/europa-regular-webfont.ttf
 @font-face {
 	font-family: "Europa";
-	src: url("./assets/fonts/europa.ttf") format("truetype");
+	src: url("./assets/fonts/Europa.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Orpheus Pro";
+	src: url("./assets/fonts/Orpheus Pro.ttf") format("truetype");
 }
 
 *,
@@ -15,6 +19,7 @@
 
 body {
 	font-family: "Europa", Arial, sans-serif;
+	font-weight: 400;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -33,4 +38,8 @@ select {
 	background-size: 24px;
 	background-repeat: no-repeat;
 	background-color: #eee;
+}
+
+.OrpheusPro {
+	font-family: "Orpheus Pro", Arial, sans-serif;
 }
