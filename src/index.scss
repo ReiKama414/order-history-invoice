@@ -39,8 +39,17 @@ select {
 	background-size: 24px;
 	background-repeat: no-repeat;
 	background-color: #eee;
+	&.select-arrow-white {
+		background-image: url(./assets/icons/Chevron_down_white.svg);
+	}
 }
 
 .OrpheusPro {
 	font-family: "Orpheus Pro", Arial, sans-serif;
+}
+
+.iconButton {
+	span {
+		position: relative;
+	}
 }

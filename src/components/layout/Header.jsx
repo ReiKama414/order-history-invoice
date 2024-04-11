@@ -98,11 +98,11 @@ const Header = () => {
 						<div className="hidden xl:block">{navList}</div>
 					</div>
 					<div className="flex items-center gap-x-[14px] text-customColor1">
-						<Button variant="text" size="sm" className="hidden xl:inline-flex items-center  text-sm leading-6 p-1">
+						<Button variant="text" size="sm" className="hidden xl:inline-flex items-center font-normal text-sm leading-6 p-1">
 							<img src={profileIcon} className="w-full object-contain pe-1" alt="Account Icon" />
 							<span>ACCOUNT</span>
 						</Button>
-						<Button variant="text" size="sm" className="hidden xl:inline-flex items-center  text-sm leading-6 p-1">
+						<Button variant="text" size="sm" className="hidden xl:inline-flex items-center font-normal text-sm leading-6 p-1">
 							<span>LOGOUT</span>
 						</Button>
 						<select className="hidden xl:inline-flex row-start-1 col-start-1 text-text bg-transparent focus:outline-none  text-sm leading-6 py-2 ps-3 pe-6 cursor-pointer">
@@ -117,12 +117,12 @@ const Header = () => {
 							<MenuHandler>
 								<IconButton
 									variant="text"
-									className="ml-auto w-6 h-6 aspect-square text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent"
+									className="iconButton ml-auto w-6 h-6 aspect-square text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent"
 									ripple={false}>
 									<img src={profileIconM} className="w-full object-contain" alt="Account Icon" />
 								</IconButton>
 							</MenuHandler>
-							<MenuList className="p-1">
+							<MenuList className="p-1 z-[1025]">
 								{sublinks.map((link) => {
 									return (
 										<MenuItem
@@ -139,7 +139,7 @@ const Header = () => {
 						</Menu>
 						<IconButton
 							variant="text"
-							className="ml-auto w-9 h-9 aspect-square text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent"
+							className="iconButton ml-auto w-9 h-9 aspect-square text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent"
 							ripple={false}
 							onClick={() => setOpenNav(!openNav)}>
 							<img src={menuIcon} className="w-full object-contain" alt="Menu Icon" />
@@ -150,7 +150,7 @@ const Header = () => {
 					<div className={`container mx-auto ${openNav ? "" : "pointer-events-none"}`}>
 						{navList}
 						<div className="flex items-center gap-x-1 text-text">
-							<Button fullWidth variant="text" size="sm" className=" text-sm leading-6 py-2 ps-2 pe-6">
+							<Button fullWidth variant="text" size="sm" className="font-normal text-sm leading-6 py-2 ps-2 pe-6">
 								<span>LOGOUT</span>
 							</Button>
 							<select className="w-full row-start-1 col-start-1 bg-transparent focus:outline-none text-sm leading-6 py-2 ps-2 pe-6 text-center">
