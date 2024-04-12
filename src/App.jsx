@@ -149,10 +149,10 @@ const App = () => {
 											{obj.certificate.map((iv) => (
 												<div
 													key={iv.name}
-													className={`grid grid-cols-3 border py-6 border-text divide-x divide-text h-[150px] ${
+													className={`grid grid-cols-3 border border-text divide-x divide-text ${
 														openStates[index]
-															? ""
-															: "opacity-0 h-0 py-0 pointer-events-none first-of-type:pointer-events-auto first-of-type:opacity-100 first-of-type:h-auto first-of-type:py-6 first-of-type:mb-6"
+															? "py-6 h-[150px]"
+															: "opacity-0 h-0 py-0 pointer-events-none first-of-type:pointer-events-auto first-of-type:opacity-100 first-of-type:h-[150px] first-of-type:py-6 first-of-type:mb-6"
 													} transition-all`}>
 													<div className="flex items-center justify-center md:p-4 ps-4 pe-[18px] py-4">
 														<img src={iv.img} className="object-contain" alt={iv.name} />
@@ -188,6 +188,10 @@ const App = () => {
 						</div>
 					)}
 				</Drawer>
+				{/* 
+				<div class="fixed inset-0 w-full h-full pointer-events-auto z-[9995] bg-black bg-opacity-60 backdrop-blur-sm" style="opacity: 1;"></div>
+				<div tabindex="-1" class="fixed z-[9999] pointer-events-auto w-full top-0 right-0 p-4" style="max-width: 300px; max-height: 100%; height: 100vh; transform: none;"></div>
+				 */}
 			</div>
 		</ThemeProvider>
 	);
