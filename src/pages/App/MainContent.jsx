@@ -37,16 +37,14 @@ const MainContent = () => {
 						key={value}
 						value={value}
 						onClick={() => setActiveTab(value)}
-						className={`w-auto py-5 text-sm leading-[18px] border-b-[3px] whitespace-nowrap ${
-							activeTab === value ? "border-customColor1" : "border-transparent"
-						}`}>
+						className={"tab w-auto py-5 text-sm leading-[18px] whitespace-nowrap"}>
 						{label}
 					</Tab>
 				))}
 			</TabsHeader>
 			<TabsBody>
 				{data.map(({ value, desc }) => (
-					<TabPanel key={value} value={value}>
+					<TabPanel key={value} value={value} className="p-0">
 						{desc}
 					</TabPanel>
 				))}

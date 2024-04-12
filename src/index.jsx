@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import "./assets/styles/tailwindcss.sass";
 import App from "./App";
+import { DrawerProvider } from "./context/DrawerProvider";
 
 // style
 import "./index.scss";
@@ -22,7 +23,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<DrawerProvider>
+			<RouterProvider router={router} />
+		</DrawerProvider>
 	</React.StrictMode>
 );
 

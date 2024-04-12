@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
 	Navbar,
-	MobileNav,
+	Collapse,
 	Typography,
 	Button,
 	IconButton,
@@ -98,11 +98,17 @@ const Header = () => {
 						<div className="hidden xl:block">{navList}</div>
 					</div>
 					<div className="flex items-center gap-x-[14px] text-customColor1">
-						<Button variant="text" size="sm" className="hidden xl:inline-flex items-center font-normal text-sm leading-6 p-1">
+						<Button
+							variant="text"
+							size="sm"
+							className="hidden xl:inline-flex items-center font-normal text-sm leading-6 p-1 rounded-sm">
 							<img src={profileIcon} className="w-full object-contain pe-1" alt="Account Icon" />
 							<span>ACCOUNT</span>
 						</Button>
-						<Button variant="text" size="sm" className="hidden xl:inline-flex items-center font-normal text-sm leading-6 p-1">
+						<Button
+							variant="text"
+							size="sm"
+							className="hidden xl:inline-flex items-center font-normal text-sm leading-6 p-1 rounded-sm">
 							<span>LOGOUT</span>
 						</Button>
 						<select className="hidden xl:inline-flex row-start-1 col-start-1 text-text bg-transparent focus:outline-none  text-sm leading-6 py-2 ps-3 pe-6 cursor-pointer">
@@ -129,7 +135,7 @@ const Header = () => {
 											key={link.text}
 											onClick={closeMenu}
 											className={"flex items-center gap-2 rounded pb-0 focus:outline-none"}>
-											<Typography as="span" variant="small" className=" py-2 text-text" color={"inherit"}>
+											<Typography as="span" variant="small" className="py-2 text-text" color={"inherit"}>
 												{link.text}
 											</Typography>
 										</MenuItem>
@@ -146,7 +152,7 @@ const Header = () => {
 						</IconButton>
 					</div>
 				</div>
-				<MobileNav open={openNav}>
+				<Collapse open={openNav}>
 					<div className={`container mx-auto ${openNav ? "" : "pointer-events-none"}`}>
 						{navList}
 						<div className="flex items-center gap-x-1 text-text">
@@ -161,7 +167,7 @@ const Header = () => {
 							</select>
 						</div>
 					</div>
-				</MobileNav>
+				</Collapse>
 			</Navbar>
 			<SubNav classnames={"hidden xl:flex"}>{subNavList}</SubNav>
 		</>
