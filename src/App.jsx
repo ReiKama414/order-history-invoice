@@ -120,7 +120,7 @@ const App = () => {
 				</div>
 
 				{/* Drawer */}
-				<Drawer placement="left" open={open} onClose={toggleDrawer} size={603} className="flex flex-col">
+				<Drawer placement="right" open={open} onClose={toggleDrawer} size={603} className="flex flex-col">
 					<div className="flex items-center justify-between OrpheusPro md:text-[28px] md:leading-8 text-2xl leading-7 border-b md:border-customColor3 border-border lg:ps-14 lg:pe-[50px] px-8 lg:pt-7 lg:pb-6 pt-[15px] pb-3.5">
 						<Typography variant="h5" className="flex-1 md:text-left text-center">
 							Diamond Certificate
